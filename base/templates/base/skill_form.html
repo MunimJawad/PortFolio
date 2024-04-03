@@ -1,0 +1,25 @@
+{% extends 'base/main.html' %}
+{% load static %}
+{% block content %}
+
+ <div class="container">
+       <h2>Add Skills</h2>
+       <form action="" method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        {% for skill in form %}
+        
+        
+        
+        <div class="mb-3">
+            <label for="" class="form-label">{{skill.label}}</label>
+            {{skill}}
+    
+        </div>
+
+        {% endfor %}
+        <input class="btn btn-primary" type="submit" value="Submit" name="" id="">
+       </form>
+ </div>
+
+
+{% endblock content %}

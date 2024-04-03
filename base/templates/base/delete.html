@@ -1,0 +1,23 @@
+{% extends 'base/main.html' %}
+{% load static %}
+{% block content %}
+<div class="layout__body">
+    <form class="form" action="" method="POST">
+        {% csrf_token %}
+        <div class="form__group">
+            <p>Are you sure you want to delete "{{obj}}"?</p>
+        </div>
+
+        <div class="for__group">
+            <input class="btn btn-primary" type="submit" value="Confirm" />
+            
+                <a href="{% url 'home' %}" class="btn btn-warning">GO BACK</a>
+            
+        </div>    
+
+    </form>
+
+    </div>
+
+
+{% endblock content %}

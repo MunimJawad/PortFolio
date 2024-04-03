@@ -1,0 +1,26 @@
+<section class="navigation-bar" id="myTopnav">
+  <a href="{% url 'home' %}" class="navi-link">Home</a>
+  <a href="{% url 'all-project' %}" class="navi-link">Projects</a>
+  <a href="#" class="navi-link">Courses</a>
+  <a href="{% url 'contact' %}" class="navi-link">Contacts</a>
+   {% if request.user.is_authenticated %}
+   <a href="{% url 'inbox' %}" class="navi-link">Inbox</a>
+  <a href="{% url 'add-project' %}" class="navi-link">Add Project</a>
+  <a href="{% url 'add-skill' %}" class="navi-link">Add Skill</a>
+   {% endif %}
+   <a href="#" class="navi-link btn btn-danger" >Buy Me a Coffee</a>
+   <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+    <i class="fa fa-bars"></i>
+  </a>
+</section>
+
+<script>
+function myFunction() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "navigation-bar") {
+    x.className += " responsive";
+  } else {
+    x.className = "navigation-bar";
+  }
+}
+</script>

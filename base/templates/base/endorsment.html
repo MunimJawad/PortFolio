@@ -1,0 +1,21 @@
+{% extends 'base/main.html' %}
+{% load static %}
+{% block content %}
+
+<div class="container">
+    <h2>Add Endorsments</h2>
+<form action="" method="POST">
+
+    {% for i in form %}
+    {% csrf_token %}
+        <div class="mb-3">
+            <label for="" class="form-label">{{i.label}}</label>
+            {{i}}
+    
+        </div>
+
+        {% endfor %}
+        <input class="btn btn-primary" type="submit" value="Submit" name="" id="">
+       </form>
+    </div>
+{% endblock content %}
